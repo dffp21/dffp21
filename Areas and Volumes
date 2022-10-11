@@ -1,0 +1,96 @@
+import math
+
+while True:
+
+    print("1. Área Quadrado.")
+    print("2. Área Triângulo.")
+    print("3. Área Retãngulo.")
+    print("4. Área Trapézio.")
+    print("5. Área Círculo.")
+    print("6. Volume Cubo.")
+    print("7. Volume Paralelepípedo.")
+    print("8. Volume Prisma Triângular.")
+    print("9. Volume Cílindro.")
+    print("")
+
+    number = int(input("Insira um número. "))
+
+    while number != 1 and number != 2 and number != 3 and number != 4 and number != 5 and number != 6 and number != 7 and number != 8 and number != 9: 
+        number = int(input("Insira um número. "))
+
+    if number == 1:
+        LadoAQ = float(input("Lado A: "))
+        AQ = LadoAQ * LadoAQ
+        print("")
+        print(f"Área do quadrado: {AQ} cm2")
+        print("")
+        
+    elif number == 2:
+        BaseT = float(input("Base: "))
+        AltuT = float(input("Altura: "))
+        AT = (BaseT * AltuT) / 2
+        print("")
+        print(f"Área do triângulo: {AT} cm2")
+        print("")
+        
+    elif number == 3:
+        LadoAR = float(input("Lado A: "))
+        LadoBR = float(input("Lado B: "))
+        AR = LadoAR * LadoBR
+        print("")
+        print(f"Área do retângulo: {AR} cm2")
+        print("")
+        
+    elif number == 4:
+        Base1 = float(input("Base A: "))
+        Base2 = float(input("Base B: "))
+        Altrap = float(input("Altura: "))
+        ATrap = ((Base1 + Base2) * Altrap) / 2
+        print("")
+        print(f"Área do trapézio: {ATrap} cm2")
+        print("")
+        
+    elif number == 5:
+        Raio = float(input("Raio: "))
+        AC = math.pi * pow(Raio, 2)
+        print("")
+        print(f"Área do círculo: {round(AC, 3)} cm2")
+        print("")
+        
+    elif number == 6:
+        LC = float(input("Lado: "))
+        ACubo = LC * LC * LC
+        print("")
+        print(f"Volume do cubo: {ACubo} cm3")
+        print("")
+        
+    elif number == 7:
+        CPar = float(input("Comprimento: "))
+        LPar = float(input("Largura: "))
+        APar = float(input("Altura: "))
+        VPar = CPar * LPar * APar
+        print("")
+        print(f"Volume do paralelepípedo: {VPar} cm3")
+        print("")
+        
+    elif number == 8:
+        ABP = float(input("Área da base: "))
+        AP = float(input("Altura: "))
+        VP = ABP * AP
+        print("")
+        print(f"Volume do prisma: {VP} cm3")
+        print("")
+        
+    elif number == 9:
+        ABC = float(input("Área da base: "))
+        ACi = float(input("Altura: "))
+        VC = ABC * ACi
+        print("")
+        print(f"Volume do cílindro: {VC} cm3")
+        print("")
+        
+    User_input = input("Queres ver mais Áreas e Volumes?(sim ou não?) ")
+    print("")
+    if User_input == "não":
+        print("Obrigado!")
+        break
